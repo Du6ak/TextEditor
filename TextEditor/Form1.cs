@@ -15,21 +15,8 @@ namespace TextEditor
         public Form1()
         {
             InitializeComponent();
-            //InitializeMyScrollBar();
             DoubleBuffered = true;
         }
-
-        /*private void InitializeMyScrollBar()
-        {
-            // Create and initialize a VScrollBar.
-            VScrollBar vScrollBar1 = new VScrollBar();
-
-            // Dock the scroll bar to the right side of the form.
-            vScrollBar1.Dock = DockStyle.Right;
-
-            // Add the scroll bar to the form.
-            Controls.Add(vScrollBar1);
-        }*/
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -41,7 +28,6 @@ namespace TextEditor
             string str;
             int rCnt;
             int cCnt;
-            //Application.StartupPath;
             string location = "..";
 
             OpenFileDialog opf = new OpenFileDialog();
@@ -95,23 +81,12 @@ namespace TextEditor
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (panel1.Visible == true)
-            {
-                panel1.Visible = false;
-            }
-            else
-            {
-                panel1.Visible = true;
-            }
-        }
 
         private void dataGridView1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             for (int i = 0; i < dataGridView1.SelectedCells.Count; i++)
             {
-                if (dataGridView1.SelectedCells[i].Style.BackColor == Color.Blue)
+                if (dataGridView1.SelectedCells[i].Style.BackColor == Color.GreenYellow)
                 {
                     dataGridView1.SelectedCells[i].Style.BackColor = Color.White;
                 }
